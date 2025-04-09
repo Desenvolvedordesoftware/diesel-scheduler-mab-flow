@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Settings, Clock, Tool, Wrench, MapPin } from "lucide-react";
+import { CheckCircle, Settings, Clock, Wrench, WrenchIcon, MapPin } from "lucide-react";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
@@ -20,7 +20,7 @@ const Home = () => {
     {
       title: "Injeção Eletrônica",
       description: "Serviços especializados em sistemas de injeção eletrônica para motores diesel.",
-      icon: <Tool className="h-10 w-10 text-diesel-DEFAULT" />,
+      icon: <WrenchIcon className="h-10 w-10 text-diesel-DEFAULT" />,
     },
   ];
 

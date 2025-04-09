@@ -1,5 +1,5 @@
 
-import { Wrench, Settings, Tool, Filter, Search, BarChart } from "lucide-react";
+import { Wrench, Settings, WrenchIcon, Filter, Search, BarChart } from "lucide-react";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -32,7 +32,7 @@ const Services = () => {
       ]
     },
     {
-      icon: <Tool className="h-10 w-10 text-diesel-DEFAULT" />,
+      icon: <WrenchIcon className="h-10 w-10 text-diesel-DEFAULT" />,
       title: "Injeção Eletrônica",
       description: "Especialistas em sistemas de injeção eletrônica para motores diesel. Oferecemos diagnóstico, reparo e otimização para máximo desempenho e economia.",
       features: [

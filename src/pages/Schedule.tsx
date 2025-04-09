@@ -1,8 +1,7 @@
-
 import { useState } from "react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
-import { CalendarIcon, Clock } from "lucide-react";
+import { CalendarIcon, Clock, MapPin, Phone } from "lucide-react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -35,7 +34,6 @@ import { toast } from "@/hooks/use-toast";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
-// Define the form schema
 const formSchema = z.object({
   name: z.string().min(2, { message: "Nome é obrigatório" }),
   email: z.string().email({ message: "E-mail inválido" }),
@@ -53,13 +51,11 @@ const Schedule = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  // Available time slots
   const timeSlots = [
     "08:00", "09:00", "10:00", "11:00", 
     "13:00", "14:00", "15:00", "16:00", "17:00"
   ];
 
-  // Available services
   const services = [
     "Manutenção Preventiva",
     "Reparo de Motor",
@@ -70,7 +66,6 @@ const Schedule = () => {
     "Outros"
   ];
 
-  // Initialize form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -83,11 +78,9 @@ const Schedule = () => {
     },
   });
 
-  // Form submission handler
   const onSubmit = (data: FormValues) => {
     setIsSubmitting(true);
     
-    // Simulate API call
     setTimeout(() => {
       console.log("Form data submitted:", data);
       setIsSubmitting(false);
@@ -100,10 +93,8 @@ const Schedule = () => {
     }, 1500);
   };
 
-  // Date filtering function
   const disabledDays = (date: Date) => {
     const day = date.getDay();
-    // Disable weekends (0 is Sunday, 6 is Saturday)
     return day === 0 || day === 6 || date < new Date(new Date().setHours(0, 0, 0, 0));
   };
 
@@ -156,7 +147,6 @@ const Schedule = () => {
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Name Field */}
                   <FormField
                     control={form.control}
                     name="name"
@@ -171,7 +161,6 @@ const Schedule = () => {
                     )}
                   />
 
-                  {/* Email Field */}
                   <FormField
                     control={form.control}
                     name="email"
@@ -186,7 +175,6 @@ const Schedule = () => {
                     )}
                   />
 
-                  {/* Phone Field */}
                   <FormField
                     control={form.control}
                     name="phone"
@@ -201,7 +189,6 @@ const Schedule = () => {
                     )}
                   />
 
-                  {/* Vehicle Field */}
                   <FormField
                     control={form.control}
                     name="vehicle"
@@ -216,7 +203,6 @@ const Schedule = () => {
                     )}
                   />
 
-                  {/* Service Selection */}
                   <FormField
                     control={form.control}
                     name="service"
@@ -240,7 +226,6 @@ const Schedule = () => {
                     )}
                   />
 
-                  {/* Date Picker */}
                   <FormField
                     control={form.control}
                     name="date"
@@ -283,7 +268,6 @@ const Schedule = () => {
                     )}
                   />
 
-                  {/* Time Selection */}
                   <FormField
                     control={form.control}
                     name="time"
@@ -308,7 +292,6 @@ const Schedule = () => {
                   />
                 </div>
 
-                {/* Description Field */}
                 <FormField
                   control={form.control}
                   name="description"
@@ -340,7 +323,6 @@ const Schedule = () => {
             </Form>
           </div>
 
-          {/* Contact Information */}
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-diesel-blue p-6 rounded-lg border border-diesel-gray/20">
               <div className="flex items-center mb-4">
