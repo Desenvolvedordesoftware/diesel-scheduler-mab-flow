@@ -4,6 +4,14 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious 
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Services = () => {
   const services = [
@@ -81,6 +89,30 @@ const Services = () => {
     }
   ];
 
+  // Gallery images from MAB Diesel
+  const galleryImages = [
+    {
+      url: "/mab-diesel-1.jpg",
+      alt: "Equipe MAB Diesel trabalhando em motor"
+    },
+    {
+      url: "/mab-diesel-2.jpg",
+      alt: "Peças de motor diesel"
+    },
+    {
+      url: "/mab-diesel-3.jpg",
+      alt: "Serviço de injeção eletrônica"
+    },
+    {
+      url: "/mab-diesel-4.jpg",
+      alt: "Motor diesel em manutenção"
+    },
+    {
+      url: "/mab-diesel-5.jpg",
+      alt: "Oficina MAB Diesel"
+    }
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
       <NavBar />
@@ -93,6 +125,36 @@ const Services = () => {
             <p className="text-gray-400 max-w-3xl">
               Oferecemos uma ampla gama de serviços especializados para manutenção e reparo de motores diesel. Nossa equipe altamente qualificada utiliza equipamentos modernos e peças de qualidade para garantir o melhor resultado.
             </p>
+          </div>
+        </section>
+        
+        {/* Gallery Carousel */}
+        <section className="py-12 bg-diesel-blue border-b border-diesel-gray/20">
+          <div className="container-custom">
+            <h2 className="text-2xl font-bold text-white mb-8 text-center">Galeria de Trabalhos</h2>
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent>
+                {galleryImages.map((image, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <Card className="border-diesel-gray/30 bg-diesel-dark overflow-hidden">
+                        <CardContent className="flex aspect-square items-center justify-center p-0">
+                          <img
+                            src={image.url}
+                            alt={image.alt}
+                            className="w-full h-full object-cover"
+                          />
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center mt-4 gap-4">
+                <CarouselPrevious className="relative bg-diesel-DEFAULT/80 hover:bg-diesel-DEFAULT border-diesel-gray/30 text-white -left-0" />
+                <CarouselNext className="relative bg-diesel-DEFAULT/80 hover:bg-diesel-DEFAULT border-diesel-gray/30 text-white -right-0" />
+              </div>
+            </Carousel>
           </div>
         </section>
         
