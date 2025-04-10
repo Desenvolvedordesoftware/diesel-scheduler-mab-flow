@@ -18,19 +18,19 @@ const About = () => {
       name: "Alexandre Silva",
       role: "Fundador e Especialista em Motores Diesel",
       bio: "Com mais de 15 anos de experiência, Alexandre lidera nossa equipe com conhecimento técnico e paixão pelo trabalho bem feito.",
-      image: "../../public/logo.png"
+      image: "/logo.png"
     },
     {
       name: "Marcelo Santos",
       role: "Técnico Especialista",
       bio: "Especialista em diagnóstico e reparo de sistemas de injeção eletrônica para motores diesel de última geração.",
-      image: "../../public/logo.png"
+      image: "/logo.png"
     },
     {
       name: "Bruno Oliveira",
       role: "Mecânico Sênior",
       bio: "Responsável pelos serviços de manutenção preventiva e reparos mecânicos, com expertise em diferentes marcas e modelos.",
-      image: "../../public/logo.png"
+      image: "/logo.png"
     },
   ];
 

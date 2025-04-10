@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <NavBar />
-      
+
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="hero-gradient py-20 md:py-32">
@@ -70,8 +70,8 @@ const Home = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="bg-diesel-dark p-6 rounded-lg border border-diesel-gray/20 hover:border-diesel-DEFAULT/40 transition duration-300"
                 >
                   <div className="mb-4">{service.icon}</div>
@@ -104,7 +104,7 @@ const Home = () => {
                 <p className="text-gray-400 mb-8">
                   Com anos de experiência no mercado, oferecemos serviços de alta qualidade para motores diesel, garantindo o melhor desempenho e a maior vida útil para o seu equipamento.
                 </p>
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-2">
@@ -113,14 +113,14 @@ const Home = () => {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="mt-8">
                   <Button asChild className="bg-diesel-DEFAULT hover:bg-diesel-DEFAULT/90 text-white">
                     <Link to="/about">Conheça Nossa Equipe</Link>
                   </Button>
                 </div>
               </div>
-              
+
               <div className="bg-diesel-gray/10 p-6 rounded-lg border border-diesel-gray/20">
                 <div className="grid grid-cols-1 gap-6">
                   <div className="flex items-start space-x-4">
@@ -133,18 +133,20 @@ const Home = () => {
                       <p className="text-gray-400">Sábado: 8h às 12h</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4">
                     <div className="bg-diesel-DEFAULT/10 p-3 rounded-lg">
                       <MapPin className="h-6 w-6 text-diesel-DEFAULT" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-1">Nossa Localização</h3>
-                      <p className="text-gray-400">Rua Exemplo, 123</p>
-                      <p className="text-gray-400">Cidade, Estado - CEP</p>
+                      <p className="text-gray-400">Av. das Torres, 103</p>
+                      <p className="text-gray-400">Bairro: Araguaia, </p>
+                      <p className="text-gray-400">Cidade: Marabá - Estado: PA</p>
+                      <p className="text-gray-400">CEP: 068504-130</p>
                     </div>
                   </div>
-                  
+
                   <Button asChild variant="outline" className="mt-2 border-diesel-DEFAULT text-diesel-DEFAULT hover:bg-diesel-DEFAULT/10">
                     <Link to="/contact">Entre em Contato</Link>
                   </Button>
