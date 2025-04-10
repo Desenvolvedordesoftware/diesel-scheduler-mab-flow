@@ -19,9 +19,6 @@ const Footer = () => {
               <a href="https://www.instagram.com/mab_diesel" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-diesel-DEFAULT transition">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-diesel-DEFAULT transition">
-                <Facebook size={20} />
-              </a>
             </div>
           </div>
           
@@ -30,7 +27,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3 text-gray-400">
                 <Phone size={18} className="mt-1 flex-shrink-0" />
-                <span>(00) 0000-0000</span>
+                <span>(94) 98405-0309</span>
               </li>
               <li className="flex items-start space-x-3 text-gray-400">
                 <Mail size={18} className="mt-1 flex-shrink-0" />
@@ -38,7 +35,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-3 text-gray-400">
                 <MapPin size={18} className="mt-1 flex-shrink-0" />
-                <span>Rua Exemplo, 123 - Cidade, Estado</span>
+                <span>Endereço: Av. das Torres, 103 - Araguaia, Marabá - PA, 68504-130</span>
               </li>
               <li className="flex items-start space-x-3 text-gray-400">
                 <Clock size={18} className="mt-1 flex-shrink-0" />

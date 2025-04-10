@@ -92,23 +92,23 @@ const Services = () => {
   // Gallery images from MAB Diesel
   const galleryImages = [
     {
-      url: "/mab-diesel-1.jpg",
+      url: "./../public/logo.png",
       alt: "Equipe MAB Diesel trabalhando em motor"
     },
     {
-      url: "/mab-diesel-2.jpg",
+      url: "./../public/logo.png",
       alt: "Peças de motor diesel"
     },
     {
-      url: "/mab-diesel-3.jpg",
+      url: "./../public/logo.png",
       alt: "Serviço de injeção eletrônica"
     },
     {
-      url: "/mab-diesel-4.jpg",
+      url: "./../public/logo.png",
       alt: "Motor diesel em manutenção"
     },
     {
-      url: "/mab-diesel-5.jpg",
+      url: "./../public/logo.png",
       alt: "Oficina MAB Diesel"
     }
   ];
