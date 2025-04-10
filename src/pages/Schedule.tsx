@@ -52,7 +52,7 @@ const Schedule = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const timeSlots = [
-    "08:00", "09:00", "10:00", "11:00", 
+    "08:00", "09:00", "10:00", "11:00",
     "13:00", "14:00", "15:00", "16:00", "17:00"
   ];
 
@@ -80,12 +80,12 @@ const Schedule = () => {
 
   const onSubmit = (data: FormValues) => {
     setIsSubmitting(true);
-    
+
     setTimeout(() => {
       console.log("Form data submitted:", data);
       setIsSubmitting(false);
       setSubmitted(true);
-      
+
       toast({
         title: "Agendamento realizado com sucesso!",
         description: `Seu agendamento foi confirmado para ${format(data.date, "dd 'de' MMMM", { locale: ptBR })} às ${data.time}.`,
@@ -102,7 +102,7 @@ const Schedule = () => {
     return (
       <div className="flex flex-col min-h-screen">
         <NavBar />
-        
+
         <main className="flex-grow py-16 bg-diesel-dark">
           <div className="container-custom max-w-4xl">
             <div className="bg-diesel-blue p-8 rounded-lg border border-diesel-gray/20">
@@ -115,7 +115,7 @@ const Schedule = () => {
                 <h1 className="text-3xl font-bold text-white mb-2">Agendamento Confirmado!</h1>
                 <p className="text-gray-400">Recebemos sua solicitação e entraremos em contato para confirmar os detalhes.</p>
               </div>
-              
+
               <div className="flex justify-center mt-8">
                 <Button asChild className="bg-diesel-DEFAULT hover:bg-diesel-DEFAULT/90 text-white">
                   <a href="/">Voltar para a Página Inicial</a>
@@ -124,7 +124,7 @@ const Schedule = () => {
             </div>
           </div>
         </main>
-        
+
         <Footer />
       </div>
     );
@@ -133,7 +133,7 @@ const Schedule = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <NavBar />
-      
+
       <main className="flex-grow py-16 bg-diesel-dark">
         <div className="container-custom max-w-4xl">
           <div className="text-center mb-10">
@@ -142,7 +142,7 @@ const Schedule = () => {
               Preencha o formulário abaixo para agendar seu serviço. Nossa equipe entrará em contato para confirmar seu agendamento.
             </p>
           </div>
-          
+
           <div className="bg-diesel-blue p-8 rounded-lg border border-diesel-gray/20">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -299,10 +299,10 @@ const Schedule = () => {
                     <FormItem>
                       <FormLabel className="text-white">Descrição do problema (opcional)</FormLabel>
                       <FormControl>
-                        <Textarea 
-                          placeholder="Descreva o problema ou forneça detalhes adicionais..." 
-                          {...field} 
-                          className="bg-diesel-dark border-diesel-gray/30 min-h-[100px]" 
+                        <Textarea
+                          placeholder="Descreva o problema ou forneça detalhes adicionais..."
+                          {...field}
+                          className="bg-diesel-dark border-diesel-gray/30 min-h-[100px]"
                         />
                       </FormControl>
                       <FormMessage />
@@ -311,8 +311,8 @@ const Schedule = () => {
                 />
 
                 <div className="pt-4">
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     className="w-full bg-diesel-DEFAULT hover:bg-diesel-DEFAULT/90 text-white"
                     disabled={isSubmitting}
                   >
@@ -333,30 +333,31 @@ const Schedule = () => {
               <p className="text-gray-400">Sábado: 8h às 12h</p>
               <p className="text-gray-400">Domingo: Fechado</p>
             </div>
-            
+
             <div className="bg-diesel-blue p-6 rounded-lg border border-diesel-gray/20">
               <div className="flex items-center mb-4">
                 <MapPin className="h-6 w-6 text-diesel-DEFAULT mr-3" />
                 <h3 className="text-xl font-semibold text-white">Localização</h3>
               </div>
-              <p className="text-gray-400">Rua Exemplo, 123</p>
-              <p className="text-gray-400">Bairro, Cidade - Estado</p>
-              <p className="text-gray-400">CEP: 00000-000</p>
+              <p className="text-gray-400">Av. das Torres, 103</p>
+              <p className="text-gray-400">Bairro: Araguaia, </p>
+              <p className="text-gray-400">Cidade: Marabá - Estado: PA</p>
+              <p className="text-gray-400">CEP: 068504-130</p>
             </div>
-            
+
             <div className="bg-diesel-blue p-6 rounded-lg border border-diesel-gray/20">
               <div className="flex items-center mb-4">
                 <Phone className="h-6 w-6 text-diesel-DEFAULT mr-3" />
                 <h3 className="text-xl font-semibold text-white">Contato</h3>
               </div>
-              <p className="text-gray-400">Telefone: (00) 0000-0000</p>
-              <p className="text-gray-400">WhatsApp: (00) 0000-0000</p>
+              <p className="text-gray-400">Telefone: (94) 98405-0309</p>
+              <p className="text-gray-400">WhatsApp: (94) 98405-0309</p>
               <p className="text-gray-400">Email: contato@mabdiesel.com.br</p>
             </div>
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );
